@@ -1,0 +1,41 @@
+En el sitio web tenemos el html css y js 
+
+Arquitectura de una aplicacion web con java
+
+-Cliente 
+html css js
+
+
+Se relaciona por el protocolo http con 
+
+-Capa Web
+jsp
+Servlets
+	
+-Capa de negocio
+objeto de negocio
+
+-Capa de datos
+Objeto de entidad
+
+Una peticion Http tiene un request y un response 
+
+request de cliente a Servidor
+
+reponse de servidor a cliente 
+
+Descargamos glasfish para trabajar 
+
+por lo mismo con el glasfish activo vamos a 
+
+agregarlo a servers
+
+por default toma el puerto 4848
+y 8080
+
+para poder iniciarlo debemos tener el jdk 8
+
+
+
+
+
