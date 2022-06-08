@@ -1,0 +1,463 @@
+Tenemos HTML que es nuestro lenguaje de enmarcado
+
+EL CSS es lo que nos permite el agregado de diseño efectos y alterar formas
+
+JS nos deja dar interactividad
+
+Etiquetas varias 
+
+
+
+
+------------------------------------------------
+
+Diferencia obvia entre sitio web y pagina web
+
+-------------------------------------------------
+Renderizar proceso de convertir las intrucciones en archivo que nos muestra el navegador
+
+
+-------------------------------------------------
+
+etiqueta forma de dar las instrucciones 
+
+ejemplo los encabezados 
+<h1></h1>principal
+<h2></h>
+<h3></h3>
+<h4></h4>
+-------------------------------------------------
+caterizamos  etiquetas
+
+<h1></h1>principal mas cercano a titulo
+<h2></h>subtitulo
+<h3></h3>inicio del capitulo
+<h4></h4>prefacio
+<h5></h5>
+<h6></h6>
+<p></p> parrafo
+<a></a>   nos permite usar un link
+<ul></ul> listas desordenadas
+<li></li> elementos de una lista
+<ol></ol> lista ordenada
+<!DOCTYPE html> aclara que la version usada es html version5
+<audio src=""></audio> Insertar    audio
+<video src=""></video> Insertar    video
+<img src="" alt=""> Insertar   imagen
+<html></html>etiqueta todo el codigo que escribamos luego del doctype
+<head></head>cabeza 
+<body></body>todo el cuerpo del programa
+<title></title>titulo de la pestaña
+<!--Comentario-->
+<table></table> Contruir una tabla 
+<tr></tr> table row contruye filas
+<td></td> table dr indica la contuccion de columnas
+<thead></thead> seria para indicar que es la tabla como titulo
+<th></th> Envabezados de la tabla
+<tbody></tbody> cada atriculo del body de la tabla
+<form action=""></form> crear formulario
+<input type="">Ingreso del usuario lo cambiamos en relacion al tipo de entrada de datos
+<label for=""></label> nos indica que es lo que queremos en el input
+<select name="" id=""></select> nos da un desplegable
+<option value=""></option> dentro del select nos deja elegir categorias
+<textarea name="" id="" cols="30" rows="10"></textarea> texto para ingresar
+    
+
+
+
+
+-------------------------------------------
+Atributos
+
+
+dentro de etiqueta
+width=""ancho
+height=""alto ambos usan pixeles
+
+alt="" nos muestra texto en caso de no encontrar la imagen
+
+src= ""ahi indicamos el lugar en donde esta la imagen pero siempre dentro desde la misma ruta 
+en la que se encuentra el archivo, no la ruta completa desde el disco
+(no la ruta absoluta)
+
+controls nos deja tener los controles disponibles de la etiqueta para video
+
+autoplay mute (que inicie la reproduccion directo sin sonido)
+
+loop 
+que el video se reproduzca en bucle
+
+para dejar un video desde youtube tenemos que dejar el link del insertar
+
+poster="" recibe la ruta de una imagen para previa del video 
+
+
+type="text" ingreso de texto (en el input)
+
+
+type="color" ingreso de color (en el input)
+
+type="time" ingreso de time (en el input)
+
+type="date" ingreso de fecha (en el input)
+
+type="number" ingreso de numero (en el input)
+
+type="password" ingreso de contraseña (en el input)
+
+placeholder="" Que es lo que queremos que escriba la persona se ve antes de que la persona escriba
+
+	
+ 
+id="Nombre de identifiacion unico"
+
+for="" en la etiqueta label inidicamos en el for a que id va dirigido el mismo
+
+value="" en la etiqueta input si queremos podemos dejar algo pre escrito 
+
+value=""(en la etiqueta option nos da el valor que va a tener cada opcion )
+
+selected (lo ingresamos en el option que queremos por defecto)
+
+rows="n" Tamaño n de filas de texto que querramos tenga el textarea
+cols="n" Tamaño m de columans de texto que querramos tenga el textarea
+maxlength="j" Tamaño j seria el maximo que querramos que tengan de caracteres a ingresar 
+
+-------------------------------------------------
+
+Atributos
+Son las extensiones agregadas en la abertura de la etiqueta
+
+ejemplo href  en el a
+
+-------------------------------------------------
+El pishing es un metodon por el cual se introducen nombres de enlances de determinada pagina 
+pero redirecciona a otra diferente 
+ejemplo
+
+<a href="https://www.instagram.com/">Ir a facebook</a>
+
+-------------------------------------------------
+listas desordenadas
+Muestra con item o puntos
+
+<h1>Perifericos</h1>
+<ul>
+    <li>Mouse</li>
+    <li>Teclado</li>
+    <li>Monitor</li>
+    
+</ul>
+
+-------------------------------------------------
+Lista ordenada
+Agrega numeros 
+
+<h1>Perifericos</h1>
+<ol>
+    <li>Mouse</li>
+    <li>Teclado</li>
+    <li>Monitor</li>
+    
+</ol>
+
+
+-----------------------------------------------------------------
+Buen orden y distribucion de la pagina
+Iniciar con el DOCTYPE
+y encerrar todo en un html
+con el atributo lang="es" aclara que esta en español(funciona para otros idiomas en caso de que lo dejemos en otro 
+idioma)
+
+<!DOCTYPE html>
+
+<html lang="es">
+ 
+</html>
+
+-------------------------------------------
+luego dentro del html tenemos el head que incluye por ejemplo al title
+
+<head>
+    <title></title>
+</head> 
+
+leugo el contenido que deberia al body
+
+<body>
+    
+<h1>Bienvenidos</h1>
+<h2>Subtitulo</h2>
+<h3>Seccion</h3>
+
+<p>Hola mundo!</p>
+<p>Hola mundo!</p>
+<a href="https://www.instagram.com/">Ir a facebook</a>
+
+<h1>Perifericos</h1>
+<ol>
+    <li>Mouse</li>
+    <li>Teclado</li>
+    <li>Monitor</li>
+
+</ol>
+
+
+
+</body>
+
+</html>
+
+-------------------------------------------
+
+Insertar una imagen variando su ancho y largo
+luego insertar un video 
+
+el video viene completamente sin sonido no se ejecuta el autoplay salvo que sea muteado 
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 2</title>
+</head>
+<body>
+    <h1>Clase 2</h1>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/250px-HTML5_logo_and_wordmark.svg.png" 
+    alt="Logo de html 5"
+    height="100px">
+
+    <video src="Barberia El Bicho - Perfil 1_ Microsoft​ Edge 2021-08-06 13-30-16.mp4" controls></video>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/hp19B8QwKv0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</body>
+</html>
+
+-------------------------------------------
+
+Ejemplo de contruccion de tablas
+
+como en tablas de paginas donde indican resultados de deporte o lista para mostrar nmombres
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 2</title>
+</head>
+<body>
+    <h1>Clase 2</h1>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/250px-HTML5_logo_and_wordmark.svg.png" 
+    alt="Logo de html 5"
+    height="100px">
+
+    <video src="Barberia El Bicho - Perfil 1_ Microsoft​ Edge 2021-08-06 13-30-16.mp4" controls
+    poster="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBQUFBcUFBUXFxcZHBcXFxcXGBgZGhoaFxoZGhcXGhcaICwjGh0pHhcXJDYkKy0vMzMzGiI4PjgwPSwyMzIBCwsLDw4PHhISHjIhIikvMjIyMjIyMjIyNDIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIvMjIvMjIyMjIyMv/AABEIALcBEwMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAEAAIDBQYHAQj/xABLEAACAQIEAwQGBwQIAgoDAAABAhEAAwQSITEFQVEGImGBEzJxkaGxBxRCYsHR8CMzUpIVJHJzsrPh8aLCNENTVGOCg5PS4hYlNf/EABkBAAMBAQEAAAAAAAAAAAAAAAABAgMEBf/EACkRAQEAAgEEAgIBAwUAAAAAAAABAhEhAxIxQVFhBBPwIqGxFEJxgZH/2gAMAwEAAhEDEQA/ANDbuI+xoqyg5msnwrDup0keNE8UxF5Wy2zBIBn21y3DnT0JldbsbbhIm6omYkn3GPjFaG/9k/eX46fjWQ7CYFgXuXNXiJJnc7+G1bDEDu+wqfcwNbdPHUcfVy3k439JaRj7n3ktN/w5f+WsizVtvpYtxjUb+K0nwe4PyrDtVphjNTJpxFL0ZqdrkNr1RUqWSascDw4uQOtZ55yeWmOFyA2rJNXHDuCXLhAVST4V0HgfYi0ihrrZtJyrt5tRuP7U4DBKVUqWH2LcH3tt86x7rn48DeOP3VTwfsGdGvNlH8I1b8hWU+kzAW7OKt27YgeiUnWSTnuan3Cp+NfSTiLsrZAtL931v5jr7orE4vFPcbO7FmO5Op99adPCy7RlnbOf/HqmpVahQ1SIa6IyFK1dC+ibXEXj/wCEP8YrnSGui/RD+9vn7iD/AIv9KonTcTfVIzGJ23PwFSW2kAjn1pl6yGInlUtRPJvRXMO2nb25axyYDDsLcFVvXiqswLqGVEDgrsVkkHUxyrp4rjX0jdgsRcxjYzDobiXArOq6ujoFXRdyCBOk6z4VUm/oh3Yjt/ffHHAYpluZiy2roUK2ZQWCuFAUgjmANes6dPu4lFMM6g7wSJ5xpvyPurj/ANH3YvFNjVxmKtPaS33kFw/tHeMqyu4UAk6xsoHOuvXcFbYlmWSd9THqlZiYnKxE07JLreytt5k0Qx1smA6/zDnEeeop9vEoxhXViRIAIOgME6cp0ob+iLOnc227zczJ5+A9wqSxw+2hDKsECBqdhoNCYmNJouind70NpUqVJRUqVeUAJcukZjmVVXclSeQJMyOtRDFDb0iTt6jc9f4vEVLctnvgoWDdCBplAI3B5UMOH2x/1LcvtDlEfb27o08BVzt9ssu7fCT62JA9LbkxAyn7UR9rnI99E2WaSGIMQZAjeeUnpQa4JAQfQtIgglgSCNtS/Lb2aUZZBksREwIMcp6E9aWWvR4d2+RFKlSqWjmmAlhmywNYPsojEBC6htAdj7N9azmG4jctyIJU7gH4ipcdxJigJEIsc9dT4c65bhdvS/Zj2ukdn7SorBTIka+W1WeIPdb2E+6uY9ie16o7W7pi25kMdch2BPgRE9PfXTWh0OUjvAwRqNRoa6MZqacGeUyytjmH0vW/22HbqlwfysD/AM1c7NdM+l5JXCv/AHq+8Wz+FcyJooxKvVpk1LYiddvZUXloJtBV1b3Cj8Fi1XvZ2X2NEnkNNvb8K8ThxuqCDBgx093wqpv8PuhoymR+vfRJIL3LhuOYmCjXXZOdssSvgNZ/QqIraug5lGYDdfDqxYVWBWQZWBHw953/AFrSBZSCpKnllOv+nP41UkTdiMXwf/swVOncY7z0JqnZSNCII3BrScJt+kYFnOadJ1JjX1z3vdFHdouG27ihlIW8IGXX9oANjHONiapLGipVqECpUoiRCGukfQ8P2mIP3bY+LVzVTXTPocGuJP8AdD/HTJ05qcKYx1pwqN8mdXhr2gr3EbaMVYkEAH1WIg8xAqyGUpoB+K2gpbMYUoGOVtM7BQdRtrM9NaWH4padSyttuIM6mBp1JI031HWgD5pTQR4la078zqIDGdSNgOoPuojD31cSpkSROu433oCWaU17SoDyaU17SoDyaVe0qA8pCoWvgNl1nT4mJ98U63dDTHIweVAS0qVKgOEvjbfrFSPAgH3a0dhuHvjMRbtLoi95o8NWJjnsAOtXWB4KEkLoJEkjMxgQNTt5RvWl4FwtrSkWgFB+0fw/OlJI0y6ls05FjcHcw18o6smpy5tJWSAfGtR2c7U3MMQpl7f2kJ2HVD9k+Gx+NEfSXwe4uS+zlx6pJ5c/IVksM8qD76vyzbb6S8Ql7BYa7bYMvpMs9JttII5Hu7VzA1e3mzIbZJyEhoB0zCQrR1AJHnVNibWQxMjcGs8o0wvpEBRlrCyYnXn+dDWPWHtq2wS5jJ+G/sqLdcrk3w2HYnAgd64MwGoB69a2+H4dhdT6NASSSTrqdzJrNcKGS2NIoh8Ww2rmvVstdv8Ap+7Gc6Rcd7OWbhMAAidR41gOLcAe0ZGo5flXQBjTzFR33V9CNKWPVylXfx8bNXy5SmdGnUGrLhmKlybgksZk8unyH6FbN+FWnOqivL/Za09tvR91wJH5Vtj1pXNn+LcXOuL2QtyVEBpMePP50GtE8VWHg7gQfeR+FCrW8rjs1Uymup/Q6kJiT9618nrlaV1r6IV/ZYg/ftj3KfzqkugvvUi1E571SKaz9q9H1C9hCZKqTESQDp09lS1XYlr+ZgirlkQTuRl11zaHNptt1nTScot0L9An8K6xOg5be6mthUIYZVhtGgRI8SKrlu4vSUTUiRIAA7s/akn1veN6fbfFEMGVB3Hgpoc/2YzMR7xHjyp2JmW/VGrgbQ2tp/KOkbx00qa3bVRCqFHQAAe4VSBcdkta28+vpNskej0zDcNn/hkeVOwv1sYu4HAbCsim2wZZt3FMMrLoSGBkETGU9RSWvaVKlQCpUqVAKlSpUAw2wdSBPWK9gDwp1D4u4FQsdh0oCeaVVVrGpA1c+OVdfdSoCG1w/vabSZq2twBA0ikFgzT4G9LYVfaHhYxVh7WbKWGhOoB5Eis3wj6P8NbSLtxrrxrlbIo9gBn3mthjLoVZKlhzjWKzWJuoD6azIy6uBy+9HSoyz7W3T6Xf9Mtx/sfcshrlom7bEyI/aIPvAesPEe6sNxBdQfbXc8HjhchlYBtJ5g+XKs12u7N4a8Gua2L0EhwP2bno4216iD1miZyzk/1ZTJz/AAnZ67cs+mtlWbf0Qn0mQ7OORneOlaDsdhwyuxEwQNRRWADWlsgIfSNl0B10Cpl8RINWfBsGbdu4eb3Ljx4TAHw+Nc2edssehPx8ccpYNfEWrYh3VR4023jcMdrinzrK8bxLKSAhOvT4zWXvO73GUWyGEk5W6c6WGG4XU6nbXVibZEgioDbHWsFwril3RW7w68xV79dZdSYFZ5YWVrhnMpte3MKRqPhT7d0oCT0NUljtNZUw1yrBuMWXVirDRGY+QM1Uwqc+pjry5dxh5uE+H4mhEpr3TcYt1OnsFPAiu6cPJySpXXPoiH7C8f8AxQPcg/OuPrc6V2L6IB/VLp63j8LaVVQ3N0973U9DUN098+VSoazvlfpNQ9x3BhVBGms/r9RRFVmJx9xWKrZZ4KgkNAhhM7biDI9nWtJNs7ZPIp3cbKDp8efOkWfMNNNOmmhkHX2UMcbcyAi1LyQUzGABmhs2XWYHL7QoRcdiS/7oBc1sahicrev3pjTefYIk6OSlcpFirXdJA5Tt+e1SM7zovM/6Hf8AU1R4C/xE426l23ZGEUE2riz6R82XKsZjBWHzaDcRWlpKCC5c/gHv/Xsrz0lz+AbDnEnmN6MpUBBadjOZY6ePxqelSoBUqVKgFQfFP3T+XzFGUHxT90/l8xQFLh/VHn86Ve4f1R5/OlQBWI4uqnYHzoC72qRTGU1lcEmJK51tXGXQaCd1DDQa7MD50DxTifo5W53GjVWEN/LvXP25R2SdJsrPaMsxDgZD7xQ+KYo3pUg2jzX7E7hhyHjtWEsYzE3Wz27QW2ft3TkB65V1J08KusFxg2mliSBoQNjp8aWWOXtrhlhv+nj/AAPxVspN7DaDU3LYOnUsnQ/d2qBu0Hp7cCGBAIM7f7VQ4/iRd7gtA20cgKg6tAIXoCTtyq27M9g74tNc9MFJEohGbXxI2nwmiYWxWXWxxymxnDceubI6zcTVIjQH7QPMdelWOEud0TWIe47XEKEqyvBI3ENldT7iCPCtO97KNKwzjpxylXGIw9q4use2spi+FBWbI2+55nzoxMQSedSZ0G51+NKZWD9coPhnBYcGPaam7VYU+jC24G8mtNw/DgAE6fnQfF7Q38vfT58p1OcY5hhODM1w52hNTMSZ5CI60dxZ3tYJ86BHLC0pAAkNJJ/lU1rMMiq0wKzX0mX1K4e2OZuXD5AKv+Jq2xy7spHL1en2YWsThxpXlx5MUPm1pytXVpwbEoCK7T9EQ/qLHref4IgriStXbforuBOHhm29LdP+EUZeCjY3W75/XKpbZoZnBYkbGCPcKmtGsfbT0MFVd7iRDsi23chlWVBy6qCczCYiR76sxVbiuJhGZcjErBkRBJVmA3me705iJrfHljldTzpF/Sr/APd7mxOx5TptuQBHWYr0cWb/ALC5/K38Ufw9Nf0KaONCJNq5oYbQEagkQZ12jWI5xT14wDH7K5rMSFEwY0k7zOnTWq19M9/f9jV4q+s4d91jRtmUHXu7jUdNNSKfhuJM0zZuLAY6hpJXLIUEa+sY6xpNPXHOEzNb1LMgCkmQpIzSVG8Hl0r1uIgfYeNJOnMkRvvpqN6WvpUvzf7PP6RPOzc9mUk7x0gifHkTtrR9tpAMESAYO4nkaATigMdx5IzQADHUEzvvTjxFQAxV4JI2HJc3X/YgzFKyxUyl8LGlVWOKgk5bbmCJ05NEECddxTzxJQAcragn7PJsu5MEc5GkQedJSxpUNhcRnnussGO8Inx38KJoBUHxT90/l8xRlB8U/dP5fMUBS4f1R5/OlXuH9UefzpUAbwHBqlhVExqxJMkk85/Ksf8ASJwG412ziMOqXLg7j23KiVElHOYgQCT7x0o1e09w+qIXcQNNdd68v8TS8uW9az/eBKt7xvTDNHgGLuLmv4zCWuiLcVm9kk5QffWS42voL4tpeNwdwsRcDiTuCU7v+9brE9lbeI/dJdUc2JQKP/NGtc04vhbdq+9u2+cKYzab89vGiQbq94XeNy+gAywS243G29de4ZxT0dkvfCqqLmZkBgKBqz8hXDsA6+lGYSs6gGNDrvWv7QobeDswsC9dtqbfIqJKh2OrSwU9NNtaNaPdyvLSYjBYd81yxbzekZr4YAgk3IYsdjGgMGqvEXJrQYn0Vm2O/kIXKDvMCMseNYp8SVOU8tq4c5uvUwvbNLRfDeiLGDX1mcA8vDyqrTGDJpvtUK3b06KjTtLEfCKzmNdEy+BDcXxNlmBf0gJ0kR5iKsBxK5dtkG2IiS06yNRC1T3L106XMPI5G2fxqfD8QSYyvbYR3W2PsNVYm7iwtua5x2kxzYjEMw1VP2aAfwqTr5sSfMVuONY4WbLvsxGVP7Tbe7fyrnFsw3lWvRntx/lZ7/pCeib+E+6pEsEjmD4g1Zo58eVSBz+vbXR3OLR1rgZtva+ssttLiq4ynO+RgYbKsxtzrqnYVAvDbYBkelud6I0zxMeVcywdp7jBEjMdBJA+J2rp3ZJf/wBdaHM3Lv8AmN+VTbfZyL3A4p2uOjW2VVjK5BAb2datLRoS2fwom0ak1gm1BX2vZjkVSJWJ6RrJzTv4bRvyMt7VWXwpuEG8ynunJLKNI0DSAfWGg/iHhWsZpFbESJVI5ke3SAW6b/CdqjL4rKDltzGq+M7zm2j9Dk3uqsHEHVwM0zyaVmSBIBHICBz3hFtCin600kaMWgw2V/VJ00jcaA8qYHXWvZlyKuU5Q0xI1bMRrrplio2bEltFQLmMHfuxpPe6wdOnLnFcttcL5LwnunKC2giAWKkETBMezWK9tEKXBvmTmEsGAXSDlJOUwRv5aTQD5xMbJPh5REtt1+HSpLz4iXyqkCMknVhpPPQ7+7zoc2FAn6yddAS5g5dSsZug11nTenOneMYiIABBOuqqAfWA13Bjc86AmzYjLoEDZueoK6awG3358vGk5xHIJtz11zHbUfZihmVYVfrRkZ5OYd7NsTB0yx7N/ILiGKtYZfSXMXlXuicwgEtMk5oE7UBZpcxB3RB4HnprBnXWBOnnXhfEwe6oPhHh1bffp50/DWs8XFuuysc6jYAEgxHMaEefnU2DwpSSzs5MCW8CY+dASYTPBz5ZnTLtED8ZqPin7p/L5ijKD4p+6fy+YoCmw/qjz+dKlh/VHn86VAGXMPhLayciIABGgEDahBez/wDRsNnH8dw5F8h6x9woPhHCCwt3biBXKhslxi7KWExlgAETFaVNBvTDF8e4TxK+pQ3EW2d0tSojx5n31xvieE9Dda2WDFZBy6j2TX0nihnUqTAMzB38K4d9IvDltXgyCA0g6aeFOEz6XCrqR9z4gGui9p4u4YozBcmR0bbKyzGvuFc44bhzduWrYYKbjKgY7Bicqz4TFbbi2KFq21vE9xoyso1M7qyRow2M7daVOKVMbiMVctF5JQAMyqcsDViTsCRqateJWye8NxVz2UwCPh84zJbuKVtlhro37xo5Fl900FxPCXLbFLikHl0I6qeYrn6s1Zp3fjZd0st5VWDxKsMp3narE4HMJDx51R4mxBkaVCMVdGxJ9h1rHt26JnceKvbVu/JHpZHQiakzPIUmTVVgsVd6eZ0+VaTgWCe9dUbk79APwEx76NXehc+NsTxrGvduEE91SQo5aGCfOKqge/HgPmakYsjG3cEOpKsRtKmD8RTXQhgdxG/LeumY6edln3cpVqUH8ahU/jUo/XuppT27hExzkbV1LssjHhtgKCTmunTfW5cH5VyoGu0dgBGBsf2XPvutSyhxaJppRFs0LOp9pqe01SFna2FB38LYLFnVc0gkkweizr0Hz6mjLPqigr/DbLPndZYkRLHUqNIE9AfjW2OvbLLfp56DDwEhNSSFJmcsgnU6xmNL6phxrC7cmO24ETqOfxqNuEYcDKVABDKAWbWYYga/d+Br1OEWDqBO4JDtqYKtsd+R9nhVcI3l9J7du0CSpAJ3hj16TprPnUbW7BliV9bfMdGJ+yZ7pluUanrUZ4NYEd0gaKBmaNNhE/7wOgpy8DsD7HIDVmOgMjc0cHvL4iK42EylSyZQWYjMYBU5GOh0giPAgVOLOHuCYDAELz0YZVAjkYyg+G9O/ou3OaDOv2mjVw5ETsWAqYYRQABIgs2hO7HMSeuuutK69HO72jOAtNIy6wFME6QIXTaQOdRtweyyFHTODGYsSSxXUEnrMmisLhltrlWY6kkk+0miKSkaIFEAQOn5VJSpUAqD4p+6fy+Yoyo721AZ7Djujz+dKrqlQFO3G/AMeQG3mx2FerxFvtZR7PzP5VnFsXUUKysXgZhbtkDMd++2pHspWcDiLhiCg6mf0aol/d4kORmuc/SRh7ly2rgAgMJAgnXQfGpuN8bFlmtWmZrg0d22XwCjn+vCsZxN7jMGuXHeeTEwPYNh7qYAYAuj27kQUdXE6eqVYfKje0PFnxV57zwMx0UbKo0VfHTnzoQk0Pf+VKwN92L7X2ltpgsUfR5JS1e+zlJkJc6RMBtoGsc9zfwVwIBC3bR1G1xNeanlXAmHxFWXB+P4rCH+r3ntjfKDKeaNK/ClYcunTsdwe0/q2rttvunMp8m1Hvqt/wDxYkyrXB/6X/2qoT6VuIAZbi2H+9kZT7e68fCg8R9IeOYyPQr7LbH5uaj9c+Gk62fy3OB7MDnnPtyoPPc1Y8S4xhuF2iSUa8R+zsruzcmc75RzY+WprkWJ7Y4+5ocQ6jpbCp8VE/GqkXCxLMSzHVmYkknqWOpNEwkLLqZZeat77+lZnY95mZzAgSxJMDkJNQI5QxNQ2n0pM871ogerofWXzGn+le/V59Rh7G0+IoJGqZHpag2T503XzGo99dv7Bn+pYf8Au597sa4zZva1u+xva8Wzbw90AW9ERxpk1MBhzEnfl41OWJ41uFbWirZoJDRVo1itb2PVFAYrhNu4zOxaTAMEchERHQnQ9T1o/D+qKr8RwkO7PnuKWIJCkAd0KByn7I+PWt8WOf8Axs0cFtQBLkZ/SQW3aMuumog7GnWuD2lVl1KtqZjxPIDmT8OgqFuBIf8ArLg0j1lkaySCVkE0Rc4fmVUzsFUhhHrEiT3m56mdhyqrz7ROOdPRw9IZZ0aCAOQUaADaJJPTWla4ZbDKwLSuo102HLaJE6cyeRion4WTkU3CFQQoUQdIAzEkg6AbAa60xeAoAALlwKFCABgAAI123kTS1Ple78LcsB+uulOmqHiHAUxOGaw166oL5/SWrmV1KvKqG1EAALBnad9aa/ZLCM/pXQtcz2bhdmMl7C5bbH3kkczSpzw0NKlSoMqVKlQCqO9tUlR3tqAgpUqVAZLEdsbR0t3VJ6etWS7Rdtb1wG1ZdlnuuymPaFjb21jH4WJlbjA9Y/1qbD4hlbK8E8m2kVeiPXBGNSPL86ixsER5VNfxHjVXibtMBmcqYOory8wKmB+hTnM1CBFIGI86UnM1EDHyp7daQI6iotqkFNIoCRCDvTwBQ6VKRSCdGr1zUSGnmmEiNRCmgwaIQ6UBOh1qUNQ6NrTg2tMOq9jeMemti25/aII/tLyPiRsfKtbZNcQ4Pj2tXA6mCpn8x7K7HwrGrdtrcXZht0PMe+sc8dVeN20mG9UUDieHs7k+ldQY7oJjQQefP3b6HcG4T1R5/OqfHWZd/wBuU1UlQrGDlWBIPQE92DBM7VeLPKbnjaYcH2BuuVGykk7E9T4+3x5VCnZ1F0FxwM1toAXX0cZQZBkaaREU36q0ZvrJMAiQDqS8TCtr3hHUnTUaVHcXIhY4s5VUtMEkDVpyqdYVWERqAJnWb39s9T4WFjheS2ttLjIVzZWUCBPLK0g+cnfWvG4dd1/rVwb/AGLfPN937w/l9w4NsIfSYiVRyztchQMilCpzaABgTJ+O9RJkChkxCFWCqCqswY3GRUeVfVmbLLbGeWpqb5a4+FpZwRSALj5RsvciTMkwoJ1Mx4dNK9+quWVjdYBdcqABW39bNmMQQNCPlFSj2rjHJikDnv5VkPBkguhbNAJWNB3RHOrDCPbud23eV/Rwj5HBZSAQVYqdDIkzrpSNaUqz9vs5lsGwMTiZIYC8brG6CSSCLhM6aabaeJmys4SABnYgLlBJJJ0gFiT3iBz5zNAHUqqBwtly5XAy5SCV17sSphh3SRJHXWa9fhrt61wc4IUhgCxbunNodYJ5gDagLao721D4HDFAQzlyTMn2DTc6TJ86IvbUBBSpUqA4DiL6zEx5VXYlSRIgxqINS3rc7jzFVuIzJqNRWhJxdkTQ1460yxiMxI8/fUdxtaQPBqJmIOtMZ689LmpBG57xqRDOnWobx71PQ0A4ClTm614aAYaIXaoDUthqAeBTqQNe0AyibR0oZhUqHSgJA2tOLa1ETTjQBNh9a1fZftA1jX1kBGdOqn7S/eHx1rIWW1ozAvluZTz016EafhRZsPorhWJS5aS4jBlYSpHMSaGxjWwzDKxeVYlTlMkBB3pmINBdgljAWB/eR/7jxVniXu5yEURA7x9on4TSxhZXgGpw49XNHejKzQIbMY10g6/LpTW+q9CcwKnVtQwyayeeQieobxo0X7vK0AO9oWE6be+mLeuZRlsgL7RtqNvKfMeMPUR3X+QOcRh3RgVLK2fMrKSDn9cEc/WIjxPIzT8O2HYKirAUgKq6ACzlZYAO3dTboByqRb96NbInXmN4Hz1+VSYe7cJAa3lEtrpoPs7TB1iPCiyHMr/IBsfVg2YW8pZVQ3CO8QpLImYa/aY/CpbLYZc+W2FzsXeEjM5CprG7EBB46UPwW9jGW4l+0EdLhyNCZXtsJVhlbcGQdjsY1ijroxBXRUzalcw7oYDuloaYnpr7OS3Fay+UX1+wpDAbaAgREg6ifZFTvxa2BOvu/DedDpvpVUr8UIE28KDFokS5guYvLM65BBn7Wwq1AvdF58vjvt057SByfA1fkVh8QryV2BjzgHT31PVHiMXi0vWETDC5afP6a4HRDb2yEoT3vInn01vKlT2o721SVHe2oCClSpUB86lyPXEfeGqnz5edNdB+tqeXynr1FBXdDHI+r/8AGrINicIEYXF2OjDpOxHhUF+iLzkqRz+cUNMj40ggZZpKkV7SU0BFf3FepSvCklATqa8NeLXtAeEUrJgxSqNxBmgDstOVabbfSnm4BQHjJXg2rw4hae+HuxnNq4E0GY22C67d4iBU2w9CcJgbtwfs7dxxtKozAH+0BAq54v2XfC4O3fu3FF17mQWhDd3KTOYfaEajxrxu1F23grOFsN6OPSelYaNq7EAHlIMkjXatAOzpv4LANcuLaw9tL93EXmOs3LgMKDqzkLA9vPY43PKWb4m/+6vU1wx/BRbQ+nvpntqYS1MeluRopPJF0LeQ50sTimuXDdcjMxzGBA9gA2AEADkAKb2gx9u7d/Yp6OygyWk55Ru7dXY94+Q5UMjSoPQ/P9Ctsd+aivoLsJ/0Cx7H/wAx6LxeOvK5VbWYAiGhoiFmYHUnadttpA+jtp4bhz4P/mPVljsNdYtkeAQYEspzER6y6gaAiObMeQp75TZucXSD+k7/AP3dtiSO9O8AaKRt5+AGtejiV6NcO0xJ1OsGIGhGogjX2xBpDB3pMtIMQPS3Bpr3ZAkRI7+5iDvRGFsXVzZnBkggnM3LUxICj7o95o3Pgu2/LxMTedQRbCEsB3pPdyZi0d0jXu/qKjXHXR6yHYnS2+jDLKc5gFu9s3KjQlzTvp49w66cu9prrXjJdgwyTrlOQ6aCJGfXWaSoDfG3gTltlhO2RlIGpGpPelRyAgkA1Mbl8Ed1SCqSsEQxzZ+/JECBpHOvL+HulmKvA0Kj2EGD4aGes0jbvb5wNZgAGB0BK6/ranou76D/AF3EZC2Tv5yuX0dzRe9HPvTC94aDNSGMvkaKJh97dzQrJUElgCNIkHUnTnUxtYhl9dQSNhpBO4mDtyMUvRYiPXWdeUezkfD2a78jX2O76e3sReRjoGQQO6rFicpkgAnTNlERpO9QDG4gTNnYE6TrqwWNdxCyPbHIVOlm9qC4IKsARoZb1TtOmus+XKjbIhQCZIABJO/jSpy7MwzuRLgAyRAnYGAdesT7CPbUt7anSKZe9UxvQaGlXlgHKM+jfaCyyg84JUSKVAfObAUPiNRHPce0UqVUQa4ZAPWhiIpUqKEBr0UqVII7tJKVKgJRXtKlTgKmPXtKgH2lkbxFWvAOz1zF3fRowAAzXGbZEG7QNWPgKVKsurbMbpWPppW4thMCFXBYZbrMs/WsRqzw0EpbEFFlSIlfZzrXYDji43hmIe5bVMq3UZVkqSEzKwnUbg+BFKlXH1cZ+uZe9xtjfLnXA+G27iXMRiGK2LUB8kl2MA5R03Gvj5ix7eYhle1h0JSylq062ge6rPm18SBAn8zXtKt5z1Jv7R/tZFqmsnun9bUqVdTJ9AfRv/8AzMP7Ln+a9aD6wskTqCAdDuYP4ilSpGct9TsfHY7aH8RS9OvX4HpNKlQkkvKdj1PPYGKRvr1+B6TSpUlPWuqJk7b7+H5imriFIBB38D4/kaVKgJAw/GmG+ugneSNDyIB+JFKlQD841HTemJfUmAfgegP4ilSoCalSpUAqVKlQH//Z"></video>
+    <iframe width="560" height="315"
+     src="https://www.youtube.com/embed/hp19B8QwKv0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+     <!-- Comentario-->
+    <!--Funciona igual que  el video con los controls
+    y el loop
+
+    <audio src=""></audio>
+
+    <div data-video="VIDEO_ID"
+    data-autoplay="0"
+    data-loop="1"
+    id="hp19B8QwKv0&list=RDhp19B8QwKv0&start_radio=1"
+    ></div>-->
+    
+    <!--Tabla con salidas-->
+
+    <table>
+        
+        <thead>
+            <tr>
+
+             <th>Nombre</th>
+             <th>Apellido</th>
+             <th>Edad</th>
+
+            </tr>
+        </thead>
+        <tbody>
+	<tr>
+            <td>Linux</td>
+            <td>Torball</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Windows</td>
+            <td>Microsoft</td>
+            <td>51</td>
+        </tr>
+        <tr>
+            <td>Mac</td>
+            <td>iphone</td>
+            <td>52</td>
+        </tr>
+    </tbody>
+        
+    </table>
+
+    
+
+
+
+    </body>
+</html>
+
+
+-----------------------------------------
+Formularios
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Intro formularios</h1>
+    
+    <form action="">
+        <!--<label for="nombre">Nombre</label>-->
+        <input  placeholder="Nombre" id="nombre" type="text">
+
+       <!-- <label for="apellido">Apellido</label>-->
+        <input placeholder="Apellido" id="apellido" type="text">
+        
+      <!--  <label for="edad">Edad</label>-->
+        <input placeholder="Edad" id="edad" type="number">
+
+       <!-- <label for="contraseña">Contraseña</label>-->
+        <input placeholder="Contraseña" id="contraseña" type="password">
+
+	<label for="fecha">Fecha</label>
+        <input id="fecha" type="date">
+        <!--
+            Si quiero dejar un valor antes de
+            setear la pagina tengo que hacerlo previamente
+            siempre en formato americano
+
+            año mes dia
+
+        <input id="fecha" type="date" value="2021-09-21">
+        -->
+        <label for="hora">Hora</label>
+
+        <input 
+        id="hora"
+        type="time">
+
+        <!--
+            Hora por defecto
+            Formato clasico
+            
+        <input 
+        id="hora"
+        type="time" value="13:56">
+
+
+        -->
+
+        <label for="color">Color</label>
+        <input id="color" type="color" >
+
+
+
+
+    </form>
+
+</body>
+</html>
+
+si sacamos los comentarios sacamos el placeholder para hacerlo con los label
+
+si queremos dejar algo preescrito usamos el value en alguno
+
+
+
+-----------------------------------------------------------------
+formulario pero le agregamos desplegables
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Intro formularios</h1>
+    
+    <form action="">
+        <!--<label for="nombre">Nombre</label>-->
+        <input  placeholder="Nombre" id="nombre" type="text">
+
+       <!-- <label for="apellido">Apellido</label>-->
+        <input placeholder="Apellido" id="apellido" type="text">
+        
+      <!--  <label for="edad">Edad</label>-->
+        <input placeholder="Edad" id="edad" type="number">
+
+       <!-- <label for="contraseña">Contraseña</label>-->
+        <input placeholder="Contraseña" id="contraseña" type="password">
+        
+        <label for="fecha">Fecha</label>
+        <input id="fecha" type="date">
+        <!--
+            Si quiero dejar un valor antes de
+            setear la pagina tengo que hacerlo previamente
+            siempre en formato americano
+
+            año mes dia
+
+        <input id="fecha" type="date" value="2021-09-21">
+        -->
+        <label for="hora">Hora</label>
+
+        <input 
+        id="hora"
+        type="time">
+
+        <!--
+            Hora por defecto
+            Formato clasico
+            
+        <input 
+        id="hora"
+        type="time" value="13:56">
+
+
+        -->
+
+        <label for="color">Color</label>
+        <input id="color" type="color" >
+
+        <select name="" id="">
+            <option value="1">Inmuebles</option>
+            <option value="2" selected>Vehiculos</option>
+            <option value="3" >Electrodomesticos</option>
+        </select>
+
+        <textarea placeholder="Dejanos tu comentario"
+        rows="10"
+        
+        cols="165"
+        
+        maxlength="370">
+
+        <!--con 165 cols nos deja justo el espacio de la pantalla-->
+
+        </textarea>
+
+
+
+    </form>
+
+</body>
+</html>
+---------------------------------

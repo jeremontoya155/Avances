@@ -1,0 +1,85 @@
+Javascript 
+
+Generar un pagina 
+que cambie de colores cuando tocamos sobre un boton 
+
+Programa de gestion para que las cosas queden subidas
+
+
+Pasos simples
+
+el alert un mensaje que va a salir como aviso 
+
+Console.log()
+
+para envair contenido por el js
+
+
+Vemos el juego de mario como guia para entender que tenemos variables
+
+
+Ejemplo si tenemos un sistema donde debamos guardar el 
+
+Nombre 
+Apellido
+Edad
+Lenguaje Favorito
+
+
+todos estos funcionan como variables
+
+
+
+
+----------------------------------
+
+
+Variables
+
+Son los contenedores donde vamos a generar valores o guardarlos
+
+se definen desde let / var / const
+
+
+los var no son tan usados
+
+los let son los mas usados y volatiles
+
+los const son para variables que no vamos a cambair 
+
+
+-----------------------------
+
+Creamos un archivo con html
+
+Importancia de los metadata 
+
+Debemos siempre completarlas para lo que conlleva a la informacion de la pagina que
+vamos a subir 
+
+el head incluye todo lo que esta relacionado a la metadata
+
+utf-8 conforme a la codificacion de la pagina 
+
+para el tema de escritura como el ñ los tildes etc
+
+body es el lugar que encasilla la completitud del sector que tenemos 
+
+
+ene estos casos voy a enviar los js a mi contenido en general 
+------------------------------
+
+Vemos la sintaxis de la funcion y como es que las mismas nos permiten dar las ejecuciones 
+
+la sintaxis consta de :
+
+function nombre(Parametros){
+
+		Accion;
+
+
+estabamos viendo las primeras opciones de ventaja que dan las funciones como encapsular 
+
+
+}
+

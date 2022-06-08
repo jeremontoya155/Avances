@@ -1,0 +1,818 @@
+Empezamos a dar desencadenadores de eventos de manera de indicar cuando pulsamos sobre algo y las acciones que realizamos etc 
+
+
+3 Factores principales :
+
+Que desencadena la accion ->Objeto Evento
+
+Quien desencada la accion->Objeto Fuente
+
+Quien recibe la accion->Objeto Listener
+
+
+
+Ejemplo al hacer click en uno de los desplegables de arriba
+en word nos da el combo de opciones correspondientes
+
+Generico inicial previo pregenerado
+
+
+
+package test.eventos;
+
+
+
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.awt.Toolkit;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+
+public class testUno {
+    
+        public static void main(String[] args) {
+        
+        Marcos m1=new Marcos();
+        
+        m1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        m1.setVisible(true);
+        
+    }
+    
+}
+
+class Marcos extends JFrame{
+
+    public Marcos(){
+    
+        Toolkit pantalla=Toolkit.getDefaultToolkit();
+        Dimension dim=pantalla.getScreenSize();
+        
+        setBounds((dim.width/4),(dim.height/4),(dim.width/2),(dim.height/2));
+        
+        
+        
+       
+        
+        
+        
+        setTitle("Aplicacion con imagenes");
+        
+    
+        Paneles p=new Paneles();
+        
+        p.setBackground(Color.PINK);
+       
+        
+        add(p);
+        
+       
+        
+        
+    }
+    
+
+
+}
+
+
+class Paneles extends JPanel{
+
+    //Creamos primero el boton correspondiente 
+    
+    //Sintaxis
+    //JButton nombreBoton=new JButton("nombre Visialuzacion");
+    
+    JButton btnAzul=new JButton("Azul");
+    
+    //Hacemos creacion del constructor 
+    
+    public Paneles(){
+        
+        add(btnAzul);
+    
+    }
+
+    
+}
+
+
+
+
+
+
+
+--------------------------
+
+Sintaxis introduccion
+
+Vamos a tener que manejar el objeto evento
+Estos vienen de java.awt.event
+EventObject->Padre de
+ActionEvent
+WindowEvent 
+
+Ejemplo
+
+Objeto fuente ->JButton ->addActionListener(objeto listener)
+Objeto Listener->JPanel ->implementa ActionListener->usa el metodo actionPerformed(Objeto Evento)
+
+
+empezamos en la lamina creamos el botton que querramos 
+
+Sintaxis
+
+JButton nombreB=new JButton(nombreVisual);
+
+agregarlo en el constructor al principal
+
+public clase(){
+	
+	add(nombreB);
+
+}
+
+
+Pero falta ponerlo a la escucha por lo cual primero implementamos el 
+ActionListener a la clase y generamos el actionPerformed
+
+en el actionPerformed le pasamos la accion que querremos que haga 
+
+y agregamos en el boton que tenga un actionListener con elementon como escucha de this
+
+nombreB.addActionListener(this);
+
+el actionPerformed recibe un ActionEvent e 
+
+public void actionPerformed(ActionEvent e){
+accion
+	
+}
+
+
+En este caso lo ultimo quedaria 
+
+class Paneles extends JPanel implements ActionListener{
+
+    //Creamos primero el boton correspondiente 
+    
+    //Sintaxis
+    //JButton nombreBoton=new JButton("nombre Visialuzacion");
+    
+    JButton btnAzul=new JButton("Azul");
+    
+    //Hacemos creacion del constructor 
+    
+    public Paneles(){
+        
+        add(btnAzul);
+        
+        btnAzul.addActionListener(this);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        this.setBackground(Color.BLUE);
+    }
+
+    
+}
+
+--------------------
+
+Vemos que a esto mismo podemos agregarle mas funcionalidades dependiendo cual sea el boton que estemos tocando
+
+tenemos que agregar el getSource para agregar mas fuentes de evento	
+
+
+nosotros debemos de agregarle un receptor que diferencie 
+
+entonces tomamos el nombre que le dieramos al action que recibe
+
+el actionPerformed 
+
+Object nombreObjeto=e.getSource();
+
+
+Entonces leugo para cada caso hacemos la comparacion
+
+if(nombreObjeto==btnElegido){
+
+	Accion
+
+}
+
+
+En este caso el trabajo quedaria como 
+
+
+package test.eventos;
+
+
+
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+
+public class testUno {
+    
+        public static void main(String[] args) {
+        
+        Marcos m1=new Marcos();
+        
+        m1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        m1.setVisible(true);
+        
+        double pickle=2;
+        int jar=(int) pickle;
+        
+        
+    }
+    
+}
+
+class Marcos extends JFrame{
+
+    public Marcos(){
+    
+        Toolkit pantalla=Toolkit.getDefaultToolkit();
+        Dimension dim=pantalla.getScreenSize();
+        
+        setBounds((dim.width/4),(dim.height/4),(dim.width/2),(dim.height/2));
+        
+        
+        
+       
+        
+        
+        
+        setTitle("Aplicacion con imagenes");
+        
+    
+        Paneles p=new Paneles();
+        
+        p.setBackground(Color.PINK);
+       
+        
+        add(p);
+        
+       
+        
+        
+    }
+    
+
+
+}
+
+
+class Paneles extends JPanel implements ActionListener{
+
+    //Creamos primero el boton correspondiente 
+    
+    //Sintaxis
+    //JButton nombreBoton=new JButton("nombre Visialuzacion");
+    
+    JButton btnAzul=new JButton("Azul");
+    JButton btnRojo=new JButton("Rojo");
+    JButton btnAmarillo=new JButton("Amarillo");
+    
+    //Hacemos creacion del constructor 
+    
+    public Paneles(){
+        
+        add(btnAzul);
+        add(btnRojo);
+        add(btnAmarillo);
+        
+        btnAzul.addActionListener(this);
+
+        btnRojo.addActionListener(this);
+        btnAmarillo.addActionListener(this);    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        
+        //objetc nombreReceptor=e.getSource();
+        //Nos da el boton que esta interaccionando en este momento
+        Object btnPulsado=e.getSource();
+        
+        if (btnPulsado==btnAzul) {
+            this.setBackground(Color.BLUE);
+            
+        }else if(btnPulsado==btnRojo) {
+        
+            this.setBackground(Color.RED);
+        }
+        else {
+            this.setBackground(Color.YELLOW);
+        }
+        
+        
+    }
+    
+   
+
+    
+}
+
+
+---------------------------------------
+
+Ahora veremos como poner la lamina de manera correcta con mejores practicas a la escucha 
+
+Agregamos un colorFondo que sea una clase que solo sea el oyente 
+
+Lo que hacemos entonces es hacer una clase interna para cada color que teng actionListener
+
+private class Escucha implements ActionListener{
+	
+	private campo;
+	
+	Constructor{	
+
+	}
+	
+	public void ActionPerformed(ActionEvent e){
+
+	Accion Ejecutar
+	}
+}
+
+
+
+
+
+Para el  ejemplo anterior debemos pasarle a cada uno 
+lo que le corresponde a su accion generando un actionListeer nuevo
+
+
+package test.eventos;
+
+
+
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+
+public class testDos {
+    
+        public static void main(String[] args) {
+        
+        Marco m1=new Marco();
+        
+        m1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        m1.setVisible(true);
+        
+        double pickle=2;
+        int jar=(int) pickle;
+        
+        
+    }
+    
+}
+
+class Marco extends JFrame{
+
+    public Marco(){
+    
+        Toolkit pantalla=Toolkit.getDefaultToolkit();
+        Dimension dim=pantalla.getScreenSize();
+        
+        setBounds((dim.width/4),(dim.height/4),(dim.width/2),(dim.height/2));
+        
+        
+        
+       
+        
+        
+        
+        setTitle("Aplicacion con imagenes");
+        
+    
+        Panel p=new Panel();
+        
+        p.setBackground(Color.PINK);
+       
+        
+        add(p);
+        
+       
+        
+        
+    }
+    
+
+
+}
+
+
+class Panel extends JPanel{
+
+    //Creamos primero el boton correspondiente 
+    
+    //Sintaxis
+    //JButton nombreBoton=new JButton("nombre Visialuzacion");
+    
+    JButton btnAzul=new JButton("Azul");
+    JButton btnRojo=new JButton("Rojo");
+    JButton btnAmarillo=new JButton("Amarillo");
+    
+    //Hacemos creacion del constructor 
+    
+    public Panel(){
+        
+        add(btnAzul);
+        add(btnRojo);
+        add(btnAmarillo);
+        
+        ColorFondo Am=new ColorFondo(Color.YELLOW);
+        ColorFondo Az=new ColorFondo(Color.BLUE);
+        ColorFondo Ro=new ColorFondo(Color.RED);        
+        btnAzul.addActionListener(Az);
+        btnRojo.addActionListener(Ro);
+        btnAmarillo.addActionListener(Am);    }
+
+
+    
+   
+    private class ColorFondo implements ActionListener{
+
+    private Color colorDeFondo;
+    public ColorFondo(Color c){
+    
+        colorDeFondo=c;
+    
+    }
+    
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        
+        setBackground(colorDeFondo);
+        
+    }
+
+
+    }
+    
+}
+
+
+
+
+-----------------------------
+
+Vemos ahora para captar no solo los eventos del raton 
+sino empezar a captar los eventos de ventana
+
+WindowListener Vemos que deben implementar 7 metodos
+
+
+windowActivated(WindowEvent e)
+windowClosed(WindowEvent e)
+windowClosing(WindowEvent e)
+windowDesactived(WindowEvent e)
+windowDeiconified(WindowEvent e)
+windowIconified(WindowEvent e)
+windowOpened(WindowEvent e)
+
+
+Para trabjar ahora vamos a crear un marco simple que implemene el WindowsListener 	
+
+Vamos a trabjar en el primero con un mensaje en consola cada que minimizamos la venatana 
+
+
+Pongo ejemplo general y vemos que podemos tomar acciones para cada caso que querramos 
+dependiendo que hacemos cuando usamos un programa
+
+Vemos casos de creacion de dos ventanas
+
+
+package test.eventosdeventana;
+
+
+
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+
+
+public class testUno {
+    
+        public static void main(String[] args) {
+        
+        Marco m1=new Marco();
+        
+        Marco m2=new Marco();
+        
+        m2.setVisible(true);
+        
+        //Esta instruccion nos indica que cuando se cierra una se cierran ambas y no es la idea 
+        m2.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        m2.setTitle("Aplicacion Dos");
+        m2.setLocation(200, 500);
+        m1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        m1.setVisible(true);
+        
+        double pickle=2;
+        int jar=(int) pickle;
+        
+        
+    }
+    
+}
+
+class Marco extends JFrame{
+
+    public Marco(){
+    
+        Toolkit pantalla=Toolkit.getDefaultToolkit();
+        Dimension dim=pantalla.getScreenSize();
+        
+        setBounds((dim.width/4),(dim.height/4),(dim.width/2),(dim.height/2));
+        
+        
+        setTitle("Aplicacion con eventos");
+        
+    
+        Panel p=new Panel();
+        
+        p.setBackground(Color.PINK);
+       
+        M_Ventana marcoVentana=new M_Ventana();
+        
+        addWindowListener(marcoVentana);
+        
+        add(p);
+        
+       
+        
+        
+    }
+    
+
+
+}
+
+
+class Panel extends JPanel{
+
+    
+}
+
+class M_Ventana implements WindowListener{
+
+    @Override
+    public void windowOpened(WindowEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public void windowClosing(WindowEvent e) {
+        
+        JOptionPane.showMessageDialog(null, "Se Cerro");
+    }
+
+    @Override
+    public void windowClosed(WindowEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    //Minimizar la ventana 
+    @Override
+    public void windowIconified(WindowEvent e) {
+        JOptionPane.showMessageDialog(null, "Se minimizo");
+    }
+
+    //Maximizar la ventana
+    @Override
+    public void windowDeiconified(WindowEvent e) {
+        JOptionPane.showMessageDialog(null, "Se maximizo");
+    }
+
+    @Override
+    public void windowActivated(WindowEvent e) {
+        
+       // JOptionPane.showMessageDialog(null, "Se activo");
+        System.out.println("Activa ventana");
+    }
+
+    @Override
+    public void windowDeactivated(WindowEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    
+
+}
+
+
+
+
+
+
+----------------------------
+
+Clases adaptadoras
+
+Las principales son
+
+KeyAdapter 
+
+WindowAdapter 
+
+MouseAdapter
+
+Vemos en este caso las interfaces que emplea el Window Adapter
+
+WindowsFocusListener 
+WindowsStateListener
+WindowListener
+EventListener
+
+En este caso vamos a rediseñar para que el codigo quede mas limpio
+empleado la extension de la clase 
+WindowsAdapter
+
+dejando solo el metodo que queremos que es el de minimizar
+
+Simplificado queda 
+
+
+package test.eventosdeventana;
+
+
+
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+
+
+public class testDos {
+    
+        public static void main(String[] args) {
+        
+        Marcos m1=new Marcos();
+        
+        Marcos m2=new Marcos();
+        
+        m2.setVisible(true);
+        
+        //Esta instruccion nos indica que cuando se cierra una se cierran ambas y no es la idea 
+        m2.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        m2.setTitle("Aplicacion Dos");
+        m2.setLocation(200, 500);
+        m1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        m1.setVisible(true);
+        
+        double pickle=2;
+        int jar=(int) pickle;
+        
+        
+    }
+    
+}
+
+class Marcos extends JFrame{
+
+    public Marcos(){
+    
+        Toolkit pantalla=Toolkit.getDefaultToolkit();
+        Dimension dim=pantalla.getScreenSize();
+        
+        setBounds((dim.width/4),(dim.height/4),(dim.width/2),(dim.height/2));
+        
+        
+        setTitle("Aplicacion con eventos");
+        
+    
+        Paneles p=new Paneles();
+        
+        p.setBackground(Color.PINK);
+       
+        M_Ventanas marcoVentana=new M_Ventanas();
+        
+        addWindowListener(marcoVentana);
+        
+        add(p);
+        
+       
+        
+        
+    }
+    
+
+
+}
+
+
+class Paneles extends JPanel{
+
+    
+}
+
+class M_Ventanas extends WindowAdapter{
+
+ 
+
+    //Minimizar la ventana 
+    @Override
+    public void windowIconified(WindowEvent e) {
+        JOptionPane.showMessageDialog(null, "Se minimizo");
+    }
+
+    //Maximizar la ventana
+    @Override
+    public void windowDeiconified(WindowEvent e) {
+        JOptionPane.showMessageDialog(null, "Se maximizo");
+    }
+
+  
+        
+
+}
+
+
+
+
+
+
+
+----------------------------
+
+
+Accion cuando una ventana con mas de un evento al paralelo
+
+Vamos a mostrar ahora con WindowStateListener
+
+que capte cualquier cambio en la ventana 
+
+WindowEvent tiene 
+getNewState()->estado nuevo
+getOldState()->estado viejo
+
+WindowStateListener 
+
+windowStateChanged(WindowEventE)
+

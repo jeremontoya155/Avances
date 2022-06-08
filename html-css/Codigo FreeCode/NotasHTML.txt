@@ -1,0 +1,53 @@
+DOCTYPE informa al navegador que tipo de documento se va a usar
+
+tenemos que la misma es una declaracion no una etiqueta
+
+
+Elemento 
+es un componente basico de un archivo en html 
+siempre debemos recordar tener de manera completa la etiqueta de apertura y de cierre
+
+Tenemos etiqueras SelfClosingtime como en los casos de las imagenes 
+
+el elemento de la etiqueta html es el ques se conoce como raiz 
+
+leugo tenemos los
+head
+dentro del head tenemos los iconos , js , css titulos entre otras cosas
+
+y 
+body
+tiene lo que se da en visibilidad en la pagina web 
+
+en el lang del idioma en html agregamos el atributo lang=es para indicarle en el caso que querramos 
+que la pagina esta en español 
+si quisieramos poner el lenguaje en ingles deberiamos ponerle "en"
+
+
+vemos que en el body a medida que escribimos siempre debemos respetar el envio de los contenidos del h1  a h6
+
+y escribir tambien en caso de ser necesario AIv9KonTcTfVIzGJ23PwFSW2kAjn1pl6yGInlUtRPJvRXMO2nb25axyYDDsLcFVvXiqswLqGVEDgrsVkkHUxyrp4rjX0jdgsRcxjYzDobiXArOq6ujoFXRdyCBOk6z4VUm
+
+Buscar en la documetnacion de mozilla
+
+developer mozilla
+
+MDN 
+
+https://developer.mozilla.org/es/
+
+
+<!--Comentario de texto intermedio -->
+
+Nos son utiles para dejar un intermedio en la estructura que tenemos 
+
+
+El main es nuestro principal 
+
+el mismo nos va a indicar donde es el sector principal donde se encuetnra cada sector de la pagina
+
+
+Para los casos de alojar imagenes siempre debemos poner
+su src bien completo y darle el valor que va a tener el alt 
+indicando la descripcion alternativa de la imagen 
+
