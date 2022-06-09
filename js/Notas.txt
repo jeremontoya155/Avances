@@ -82,4 +82,39 @@ estabamos viendo las primeras opciones de ventaja que dan las funciones como enc
 
 
 }
+-----------------------------------------
+Vemos como la interaccion con los botones se puede dar de forma facil con el oneclick
+
+si creamos un button y le damos el atributo oneclick
+vemos lo que queremos que haga el button en el caso de que hagamos el click 
+
+en el ejemplo actual muestra como dejamos cuando damos la accion del click sobre el boton para que cambie 
+una porcion de codigo del div 
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>!Hola mundo</h1>
+
+    <button onclick='saludar("Damian","Pizza")'>Saludar Damian</button>
+    <button onclick='saludar("Marcos","Pizza")'>Saludar Marcos</button>
+    <button onclick='saludar("Jere","Empanadas")'>Saludar Jere</button>
+
+    <div id="espacio">Espacio a cambiar</div>
+    <script>
+      //Recordar siempre que cuando quiseramos indicar una concatenacion podemos envair el texto pegado
+
+      function saludar(nombre, comida) {
+        console.log("La persona:" + nombre + " come:" + comida);
+        var espacio = document.getElementById("espacio");
+        espacio.innerText = "Nombre:" + nombre + " Come:" + comida;
+      }
+    </script>
+  </body>
+</html>
 

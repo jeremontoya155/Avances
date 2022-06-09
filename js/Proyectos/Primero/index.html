@@ -9,21 +9,19 @@
   <body>
     <h1>!Hola mundo</h1>
 
+    <button onclick='saludar("Damian","Pizza")'>Saludar Damian</button>
+    <button onclick='saludar("Marcos","Pizza")'>Saludar Marcos</button>
+    <button onclick='saludar("Jere","Empanadas")'>Saludar Jere</button>
+
+    <div id="espacio">Espacio a cambiar</div>
     <script>
-      alert("Hola");
-      console.log("Hola envia esto por consola");
-
-      //Redcordar siempre que cuando quiseramos indicar una concatenacion podemos envair el texto pegado
-
-      alert("Comer " + "Lasaña");
+      //Recordar siempre que cuando quiseramos indicar una concatenacion podemos envair el texto pegado
 
       function saludar(nombre, comida) {
         console.log("La persona:" + nombre + " come:" + comida);
+        var espacio = document.getElementById("espacio");
+        espacio.innerText = "Nombre:" + nombre + " Come:" + comida;
       }
-
-      saludar("Matias", "Lasaña");
-      saludar("Matias", "Lasaña");
-      saludar("Matias", "Lasaña");
     </script>
   </body>
 </html>
