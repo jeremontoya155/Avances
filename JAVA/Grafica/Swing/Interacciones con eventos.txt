@@ -816,3 +816,22 @@ WindowStateListener
 
 windowStateChanged(WindowEventE)
 
+-------------------------------------------------
+
+KeyEvent es la que viene 
+con KeyAdapter
+con esta forma vamos a poder ver las interacciones que tenemos con el teclado
+
+KeyListener
+-keyPressed ->presionada
+-keyReleased -> cuando se suelta
+-keyTyped ->cuando ya se escribio
+
+Java considera como un evento a las interacciones que tenemos es decir que si uno interacciona con
+una tecla y queremos almacenar esto 
+tenemos que empaquetar este suceso en un objeto oyente
+
+podemos ver por ejemplo con geyKeyChar que tecla fue la pulsada 
+
+
+
